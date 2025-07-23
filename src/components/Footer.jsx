@@ -41,7 +41,7 @@ const CardOrganizador = ({nombre, profesion, cargo, correo}) => {
 const Footer = ()=>{
     return (
     <footer 
-        className="m-4 bg-blue-500 box-border px-2 py-4 gap-[20px]" 
+        className="m-4 bg-blue-500 box-border px-2 py-4 gap-[20px] rounded-md" 
         style={{background: linearGreenGradient}}
     >
         <h3 className="text-[36px] text-center font-semibold">Organiza e invita:</h3>
