@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo-sides.svg";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -69,10 +70,41 @@ const Header = () => {
         {/* Menú */}
         <ul className="hidden md:flex gap-6 text-white font-medium px-6">
           <li>
-            <a href="#inicio" className="hover:underline font-bold text-xl">Inicio</a>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => {
+                let className = "font-bold text-xl ";
+                className += isActive ? "underline" : "hover:underline";
+                return className;
+              }}
+            >
+              Inicio
+            </NavLink>
           </li>
-          <li><a href="#acerca" className="hover:underline font-bold text-xl">Acerca</a></li>
-          <li><a href="#contacto" className="hover:underline font-bold text-xl">Contacto</a></li>
+          <li>
+            <NavLink 
+              to="/agenda" 
+              className={({ isActive }) => {
+                let className = "font-bold text-xl ";
+                className += isActive ? "underline" : "hover:underline";
+                return className;
+              }}
+            >
+              Agenda
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/expositores" 
+              className={({ isActive }) => {
+                let className = "font-bold text-xl ";
+                className += isActive ? "underline" : "hover:underline";
+                return className;
+              }}
+            >
+              Expositores
+            </NavLink>
+          </li>
         </ul>
       </div>
 
@@ -83,9 +115,42 @@ const Header = () => {
             background: `radial-gradient(ellipse at bottom, #9FA62C 10%, #80AF38 40%, #225A7E 300%)`,
           }}
         >
-          <li><a href="#inicio" className="block hover:underline">Inicio</a></li>
-          <li><a href="#acerca" className="block hover:underline">Acerca</a></li>
-          <li><a href="#contacto" className="block hover:underline">Contacto</a></li>
+          <li>
+            <NavLink 
+              to="/"
+              className={({ isActive }) => {
+                let className = "text-md block ";
+                className += isActive ? "underline font-bold" : "hover:underline hover:font-bold";
+                return className;
+              }}
+            >
+              Inicio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/agenda"
+              className={({ isActive }) => {
+                let className = "text-md block ";
+                className += isActive ? "underline font-bold" : "hover:underline hover:font-bold";
+                return className;
+              }}
+            >
+              Agenda
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/expositores"
+              className={({ isActive }) => {
+                let className = "text-md block ";
+                className += isActive ? "underline font-bold" : "hover:underline hover:font-bold";
+                return className;
+              }}
+            >
+              Expositores
+            </NavLink>
+          </li>
         </ul>
       )}
     </nav>
