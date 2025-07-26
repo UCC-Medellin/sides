@@ -34,7 +34,9 @@ const Header = () => {
       }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-        <img src={logo} className="self-center aspect-auto max-h-[32px] w-fit"/>
+        <NavLink to={"/"}>
+          <img src={logo} className="self-center aspect-auto max-h-[32px] w-fit"/>
+        </NavLink>
 
         {/* Botón hamburguesa */}
         <button
@@ -71,18 +73,6 @@ const Header = () => {
         <ul className="hidden md:flex gap-6 text-white font-medium px-6">
           <li>
             <NavLink 
-              to="/" 
-              className={({ isActive }) => {
-                let className = "font-bold text-xl ";
-                className += isActive ? "underline" : "hover:underline";
-                return className;
-              }}
-            >
-              Inicio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink 
               to="/agenda" 
               className={({ isActive }) => {
                 let className = "font-bold text-xl ";
@@ -105,28 +95,28 @@ const Header = () => {
               Expositores
             </NavLink>
           </li>
+          <li>
+            <NavLink 
+              to="/acerca-de-nosotros" 
+              className={({ isActive }) => {
+                let className = "font-bold text-xl ";
+                className += isActive ? "underline" : "hover:underline";
+                return className;
+              }}
+            >
+              Acerca de
+            </NavLink>
+          </li>
         </ul>
       </div>
 
       {/* Menú móvil */}
       {menuOpen && (
-        <ul className="backdrop-blur-[100px] absolute md:hidden mt-4 space-y-2 px-6 py-2 text-white font-medium w-full shadow-md"
+        <ul className="backdrop-blur-[100px] absolute md:hidden mt-4 space-y-2 px-6 py-2 text-white font-medium w-full shadow-md backdrop-blur-md"
           style={{
             background: `radial-gradient(ellipse at bottom, #9FA62C 10%, #80AF38 40%, #225A7E 300%)`,
           }}
         >
-          <li>
-            <NavLink 
-              to="/"
-              className={({ isActive }) => {
-                let className = "text-md block ";
-                className += isActive ? "underline font-bold" : "hover:underline hover:font-bold";
-                return className;
-              }}
-            >
-              Inicio
-            </NavLink>
-          </li>
           <li>
             <NavLink 
               to="/agenda"
@@ -149,6 +139,18 @@ const Header = () => {
               }}
             >
               Expositores
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/acerca-de-nosotros"
+              className={({ isActive }) => {
+                let className = "text-md block ";
+                className += isActive ? "underline font-bold" : "hover:underline hover:font-bold";
+                return className;
+              }}
+            >
+              Acerca de
             </NavLink>
           </li>
         </ul>
