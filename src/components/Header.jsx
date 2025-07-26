@@ -33,7 +33,7 @@ const Header = () => {
         ),
       }}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-[10dvw]">
         <NavLink to={"/"}>
           <img src={logo} className="self-center aspect-auto max-h-[32px] w-fit"/>
         </NavLink>
