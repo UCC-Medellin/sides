@@ -1,5 +1,11 @@
 .clip-diagonal-main {
-  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 60%);
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 55%);
+}
+
+@media (max-width: 767px) {
+  .clip-diagonal-main {
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 50%);
+  }
 }
 
 .clip-diagonal {
