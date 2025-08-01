@@ -23,13 +23,13 @@ const CardOrganizador = ({nombre, profesion, cargo, correo}) => {
     return (
         <div className="flex flex-col flex-wrap justify-around items-center w-full lg:w-1/3 gap-[20px] p-2 text-center">
             <div className="flex flex-col items-center">
-                <h4 className="font-medium text-[24px]">{nombre}</h4>
-                <h5 className="text-[20px]">{profesion}</h5>
+                <h4 className="font-medium text-[20px] md:text-[24px]">{nombre}</h4>
+                <h5 className="text-[16px] md:text-[20px]">{profesion}</h5>
             </div>
             {/* <div className="flex flex-col items-center">
                 <p className="text-[16px] italic">Facultad de ingeniería</p>
             </div> */}
-            <div className="flex flex-col items-center text-[16px]">
+            <div className="flex flex-col items-center text-[12px] md:text-[16px]">
                 <p className="font-medium">{cargo}</p>
                 <p>Correo de contacto:</p>
                 <a className="underline" href={`mailto:${correo}`} target="_blank">{correo}</a>
@@ -44,7 +44,7 @@ const Footer = ()=>{
         className="m-4 bg-blue-500 box-border px-2 py-4 gap-[20px] rounded-md" 
         style={{background: linearGreenGradient}}
     >
-        <h3 className="text-[36px] text-center font-semibold">Organiza e invita:</h3>
+        <h3 className="text-[30px] md:text-[36px] text-center font-semibold">Organiza e invita:</h3>
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-[20px] min-h-[200px]">
             {ORGANIZADORES.map(({nombre, profesion, cargo, correo}, index)=>{
                 return (
