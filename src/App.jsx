@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/Home'
 import AgendaPage from './pages/Agenda'
 import ExpositoresPage from './pages/Expositores'
+import AcercaDePage from './pages/AcercaDe'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route index element={<HomePage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/acerca-de-nosotros' element={<AcercaDePage />} />
         <Route path='/agenda' element={<AgendaPage />} />
         <Route path='/expositores' element={<ExpositoresPage />} />
       </Routes>
