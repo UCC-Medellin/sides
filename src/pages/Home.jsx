@@ -15,7 +15,7 @@ const HomePage = () => {
                     <div className="flex flex-col gap-[20px]">
                         <p>Este segundo semestre de 2025, en el Seminario de Ingeniería y Desarrollo de Software, Prepárate para vivir una edición cargada de energía, con paneles y ponencias sobre los temas más actuales del mundo tecnológico.</p>
                         <p>Y este año traemos una gran novedad: ¡celebraremos por primera vez el Día del profesional de la ingeniería! Un espacio especial con charlas inspiradoras, casos reales y debates sobre los desafíos y oportunidades que hoy marcan la ingeniería.</p>
-                        <a className="bg-[#162D3C] hover:bg-[#80AF38] transition-all text-white w-fit px-6 py-2 rounded-full" href="https://google.com" target="_blank">Inscribete</a>
+                        <a className="bg-[#162D3C] hover:bg-[#80AF38] transition-all text-white w-fit px-6 py-2 rounded-full" href="https://forms.office.com/r/gUYw4QiB94" target="_blank">Inscribete</a>
                         <img src={logoFacultad} alt="logo-ucc" className="max-w-[475px]"/>
                     </div>
                 </div>
