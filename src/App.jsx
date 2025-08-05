@@ -10,7 +10,7 @@ import AcercaDePage from './pages/AcercaDe'
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/sides">
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
